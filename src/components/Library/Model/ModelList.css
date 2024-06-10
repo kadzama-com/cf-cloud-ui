@@ -1,0 +1,23 @@
+
+.model-tags-row {
+    padding: 0.5rem;
+    padding-top: 0rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.model-tag {
+    margin-top: 0.1rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.spiner-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}

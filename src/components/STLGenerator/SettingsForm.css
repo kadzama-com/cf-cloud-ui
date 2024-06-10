@@ -1,0 +1,28 @@
+.fontPacifico {
+    font-family: 'Pacifico';
+}
+
+.fontLobster {
+    font-family: 'Lobster', cursive;
+  }
+
+.fontAlegreya {
+    font-family: 'Alegreya Sans', sans-serif;
+  }
+
+.fontRaleway {
+    font-family: 'Raleway', sans-serif;
+  }
+
+.fontVollkorn {
+    font-family: 'Vollkorn', serif;
+    font-weight: 900;
+  }
+
+.fontPTSans {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.fontPTSerif {
+    font-family: 'PT Serif', serif;
+}

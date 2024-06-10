@@ -1,1 +1,3 @@
-# cf-cloud-ui
+# Chocolate Fiesta Cloud
+
+Chocolate Fiesta Cloud frontend

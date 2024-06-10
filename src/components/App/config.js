@@ -1,0 +1,1 @@
+export const fiestaCloudBackend = process.env.REACT_APP_CLOUD_API_URL;
