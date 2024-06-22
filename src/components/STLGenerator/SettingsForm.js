@@ -42,7 +42,7 @@ export default function SettingsForm({ updateSTL, setStlSettings }) {
             <Form.Control
               size="sm"
               type="text"
-              defaultValue="KADZAMA"
+              defaultValue="Chocolate Fiesta"
               onChange={(e) => setStlSettings({ text: e.target.value })}
             />
           </Col>
