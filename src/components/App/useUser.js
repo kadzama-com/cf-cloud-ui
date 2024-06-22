@@ -1,18 +1,22 @@
-import { useState, createContext } from 'react';
-
+import { useState, createContext } from "react";
 
 export const UserContext = createContext();
 
 export function useUser() {
   const getUser = () => {
-    const userString = localStorage.getItem('user');
-    const user = userString ? JSON.parse(userString) : null;
-    return user
+    try {
+      const userString = localStorage.getItem("user");
+      const user = userString ? JSON.parse(userString) : null;
+      return user;
+    } catch (e) {
+      console.log("Error getting user from localStorage", e);
+    }
+    return null;
   };
   const [user, setUser] = useState(getUser());
 
-  const saveUser = user => {
-    localStorage.setItem('user', JSON.stringify(user));
+  const saveUser = (user) => {
+    localStorage.setItem("user", JSON.stringify(user));
     setUser(user);
   };
 
@@ -23,6 +27,6 @@ export function useUser() {
   return {
     setUser: saveUser,
     user,
-    removeUser
-  }
+    removeUser,
+  };
 }

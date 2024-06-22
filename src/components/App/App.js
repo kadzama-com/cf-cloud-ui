@@ -1,25 +1,27 @@
-import React from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
-import "./App.css";
-import Login from "../Auth/Login";
-import Signup from "../Auth/Signup";
-import DrawPrint from "../DrawPrint/DrawPrint";
-import Library from "../Library/Library";
-import Navigation from "../Navigation/Navigation";
-import Slicer from "../Slicer/Slicer";
-import { useUser, UserContext } from "./useUser";
-import DrawApp from "../DrawApp/DrawApp";
-import STLGenerator from "../STLGenerator/STLGenerator";
+import './App.css';
+import Login from '../Auth/Login';
+import Signup from '../Auth/Signup';
+import DrawPrint from '../DrawPrint/DrawPrint';
+import Library from '../Library/Library';
+import Navigation from '../Navigation/Navigation';
+import Slicer from '../Slicer/Slicer';
+import { useUser, UserContext } from './useUser';
+import DrawApp from '../DrawApp/DrawApp';
+import STLGenerator from '../STLGenerator/STLGenerator';
 
 function App() {
   const { user, setUser, removeUser } = useUser();
 
   return (
-    <UserContext.Provider value={{ user, setUser, removeUser }}>
+
+    <UserContext.Provider value={{ user, setUser, removeUser }} >
+
       <BrowserRouter>
-        {user ? (
-          <Routes>
+        {user ?
+          <Switch>
             <Route exact path="/draw">
               <DrawApp />
             </Route>
@@ -38,26 +40,30 @@ function App() {
                 <STLGenerator />
               </Route>
               <Route path="/*">
-                <Navigate to="/draw-print" />
+                <Redirect to="/draw-print" />
               </Route>
             </Route>
-          </Routes>
-        ) : (
-          <Routes>
+            
+          </Switch>
+          :
+          <Switch>
             <Route path="/login">
-              <Login />
+              <Login/>
             </Route>
             <Route path="/signup">
-              <Signup />
+              <Signup/>
             </Route>
             <Route path="/*">
-              <Navigate to="/login" />
+              <Redirect to="/login" />
             </Route>
-          </Routes>
-        )}
+          </Switch>
+        }
+
       </BrowserRouter>
     </UserContext.Provider>
+
   );
 }
+
 
 export default App;

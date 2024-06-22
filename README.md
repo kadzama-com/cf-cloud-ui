@@ -1,3 +1,3 @@
 # Chocolate Fiesta Cloud
 
-Chocolate Fiesta Cloud frontend
+Исходный код фронтенда приложения Chocolate Fiesta Cloud

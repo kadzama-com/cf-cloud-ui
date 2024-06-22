@@ -1,17 +1,17 @@
-import firebase from "firebase/compat/app";
-import "firebase/compat/auth";
-import "firebase/compat/firestore";
-import "firebase/compat/storage";
-import "firebase/compat/analytics";
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
+import "firebase/storage";
+import "firebase/analytics";
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyDsEXIV0OTzWuRX4XBiVB4a-3w4bP_fnCs",
-  authDomain: "chocolate-fiesta-cloud.firebaseapp.com",
-  projectId: "chocolate-fiesta-cloud",
-  storageBucket: "chocolate-fiesta-cloud.appspot.com",
-  messagingSenderId: "419100703725",
-  appId: "1:419100703725:web:42a642a456befea15045e4",
-  measurementId: "G-FRZNRK641V",
+  apiKey: "AIzaSyBP3MDb5upM0oEEHnCKp5GYX0OUowkbvQE",
+  authDomain: "kadzama3dprinter.firebaseapp.com",
+  projectId: "kadzama3dprinter",
+  storageBucket: "kadzama3dprinter.appspot.com",
+  messagingSenderId: "957194061920",
+  appId: "1:957194061920:web:463d3b0992b64378139b05",
+  measurementId: "G-X5N8W274ZC",
 };
 
 export const storageUserFolder = "user";
